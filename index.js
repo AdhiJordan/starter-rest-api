@@ -1,15 +1,14 @@
-import express from "express";
-import bodyParser from "body-parser";
-import mysql from "mysql2";
-import cors from "cors";
-import { JWT_EXPIRES_IN, JWT_SECRET } from "./config.js";
-import jwt from "jsonwebtoken";
-import path from "path";
-import nodemailer from "nodemailer";
-import { jsPDF } from "jspdf";
-import { applyPlugin } from "jspdf-autotable";
-import { get } from "http";
-import validator from "validator";
+const express = require("express");
+const bodyParser = require("body-parser");
+const mysql = require("mysql2");
+const cors = require("cors");
+const { JWT_EXPIRES_IN, JWT_SECRET } = require("./config.js");
+const jwt = require("jsonwebtoken");
+const path = require("path");
+const nodemailer = require("nodemailer");
+const { jsPDF } = require("jspdf");
+const { applyPlugin } = require("jspdf-autotable");
+
 applyPlugin(jsPDF);
 
 const app = express();
